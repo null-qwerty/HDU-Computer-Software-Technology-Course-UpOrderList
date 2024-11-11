@@ -165,8 +165,6 @@ void generate_cmd(std::string cmd, UpOrderList &list)
         list.delete_element(data);
     } else if (cmd_name == "show") {
         list.show_list();
-    } else if (cmd_name == "exit") {
-        exit(0);
     } else {
         std::cout << "unknown command" << std::endl;
     }
