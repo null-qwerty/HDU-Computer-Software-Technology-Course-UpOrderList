@@ -33,7 +33,7 @@ myList &myList::addend(int data)
 
 myList &myList::del(int index)
 {
-    if (index < 0 || index >= length) {
+    if (index <= 0 || index > length) {
         std::throw_with_nested(
             std::runtime_error("[myList::del] Index out of range"));
         return *this;
@@ -64,7 +64,7 @@ myList &myList::insert(int index, int data)
 
 myList &myList::replace(int index, int data)
 {
-    if (index < 0 || index >= length) {
+    if (index <= 0 || index > length) {
         std::throw_with_nested(
             std::runtime_error("[myList::replace] Index out of range"));
         return *this;
@@ -81,7 +81,7 @@ int myList::lenth()
 
 int myList::get(int index)
 {
-    if (index < 0 || index >= length) {
+    if (index <= 0 || index > length) {
         std::throw_with_nested(
             std::runtime_error("[myList::get] Index out of range"));
         return -1;
